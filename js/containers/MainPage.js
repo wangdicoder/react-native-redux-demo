@@ -8,16 +8,15 @@ import {Text, View} from 'react-native';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as Actions from '../actions/ActionCreator';
-import {increment} from '../actions/ActionCreator';
 import Counter from '../components/Counter';
 
 class MainPage extends Component{
 
     render(){
-        const {number, onPress} = this.props;
+        const {number, actions} = this.props;
         return(
             <View>
-                <Counter text={number} onPress={onPress.increment}/>
+                <Counter text={number} onPress={actions}/>
             </View>
         );
     }
@@ -31,7 +30,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onPress: bindActionCreators(Actions, dispatch)
+        actions: bindActionCreators(Actions, dispatch)
     };
 };
 

@@ -8,7 +8,7 @@ import {Text, View, Button} from 'react-native';
 
 export default class Counter extends Component{
     static propTypes = {
-        onPress: PropTypes.func
+        onPress: PropTypes.object
     };
 
     render(){
@@ -16,7 +16,9 @@ export default class Counter extends Component{
         return(
             <View>
                 <Text>{text}</Text>
-                <Button title="Click" onPress={onPress}/>
+                <Button title="add" onPress={onPress.increment}/>
+                <Text> </Text>
+                <Button title="subtract" onPress={onPress.decrement}/>
             </View>
         );
     }

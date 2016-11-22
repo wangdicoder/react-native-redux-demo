@@ -4,7 +4,7 @@
  * @flow
  */
 
-import App from './js/App';
+import Root from './js/Root';
 import { AppRegistry} from 'react-native';
 
-AppRegistry.registerComponent('ReduxDemo', () => App);
+AppRegistry.registerComponent('ReduxDemo', () => Root);

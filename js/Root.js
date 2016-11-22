@@ -6,15 +6,14 @@
 import { store } from './store/index';
 import { Provider } from 'react-redux';
 import React from 'react';
-import MainPage from './containers/MainPage';
-import { Navigator } from 'react-native';
+import App from './containers/App';
 
-export default class App extends React.Component{
+export default class Root extends React.Component{
     
     render(){
         return(
             <Provider store={store}>
-                <MainPage />
+                <App />
             </Provider>
         );
     }
