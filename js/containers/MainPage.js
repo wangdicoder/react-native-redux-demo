@@ -7,7 +7,7 @@ import React, {Component} from 'react';
 import {Text, View} from 'react-native';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import * as Actions from '../actions/ActionCreator';
+import * as Actions from '../actions/actionCreator';
 import Counter from '../components/Counter';
 
 class MainPage extends Component{

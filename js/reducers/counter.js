@@ -3,7 +3,7 @@
  */
 'use strict';
 
-import * as types from '../actions/ActionTypes';
+import * as types from '../actions/actionTypes';
 
 const initialState = {
     count: 0

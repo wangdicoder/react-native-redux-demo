@@ -15,7 +15,7 @@ export default class Counter extends Component{
         const {text, onPress} = this.props;
         return(
             <View>
-                <Text>{text}</Text>
+                <Text style={{fontSize: 25, alignSelf: 'center'}}>{text}</Text>
                 <Button title="add" onPress={onPress.increment}/>
                 <Text> </Text>
                 <Button title="subtract" onPress={onPress.decrement}/>

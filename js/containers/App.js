@@ -4,14 +4,19 @@
 'use strict';
 
 import React from 'react';
-import { Navigator, View } from 'react-native';
+import { Navigator, View, Text } from 'react-native';
 import MainPage from './MainPage';
 
 export default class App extends React.Component{
 
     render(){
         return(
-            <MainPage/>
+            <Navigator
+                initialRoute={{component: MainPage}}
+                renderScene={(route, navigator) => {
+                    return <route.component navigator={navigator} {...route.args}/>
+                }}
+            />
         );
     }
 }

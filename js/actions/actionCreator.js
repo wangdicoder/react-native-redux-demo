@@ -3,7 +3,7 @@
  */
 'use strict';
 
-import * as types from './ActionTypes';
+import * as types from './actionTypes';
 
 export function increment() {
     return {
